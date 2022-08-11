@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import url(root.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cards {
+    margin: 20px 0;
+}
+
+.card {
+    width: 13rem;
+    padding: 50px 40px;
+    margin: auto;
+}
+
+.card > img {
+    margin-bottom: 20px;
+}
+
+.card > h2 {
+    font-family: var(--font2);
+    font-size: 2rem;
+    color: var(--elements);
+    margin-bottom: 20px;
+}
+
+.card > p {
+    font-family: var(--font1);
+    color: var(--text);
+    margin-bottom: 80px;
+}
+
+.card > a {
+    font-family: var(--font1);
+    font-size: 0.9rem;
+    background-color: var(--elements);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: 2px solid var(--elements);
+    transition: 0.2s;
+}
+
+.card > a:hover {
+    background-color: transparent;
+    border: 2px solid var(--elements);
+}
+
+#card1 {
+    background-color: var(--card1);
+    border-radius: 10px 10px 0 0;
+}
+
+#card1 > a {
+    color: var(--card1);
+}
+
+#card2 {
+    background-color: var(--card2);
+}
+
+#card2 > a {
+    color: var(--card2);
+}
+
+#card3 {
+    background-color: var(--card3);
+    border-radius: 0 0 10px 10px;
+}
+
+#card3 > a {
+    color: var(--card3);
+}
+
+#card1 > a:hover, #card2 > a:hover, #card3 > a:hover {
+    color: var(--elements);
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #card1 {
+        border-radius: 10px 0 0 10px;
+    }
+
+    #card3 {
+        border-radius: 0 10px 10px 0;
+    }
+}
